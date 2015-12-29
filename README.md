@@ -15,7 +15,7 @@
 
 1) Install thru PIP
 
-    ```pip install django-parse-push```
+    pip install django-parse-push
 
 2) Add `parse_push` to `settings.INSTALLED_APPS`
 
@@ -28,7 +28,7 @@
 
 3) Run migrations
 
-    ```python manage.py migrate parse_push```
+    python manage.py migrate parse_push
 
 4) Add environment vars
 
