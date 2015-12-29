@@ -71,7 +71,7 @@ class User(AbstractBaseUser, PermissionsMixin)
 
     def push(self, data):
         device = user.device_set.latest()
-        device.push(data)
+        return device.push(data)
 ```
 
 ###Example 3###
