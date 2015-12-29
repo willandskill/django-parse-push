@@ -86,3 +86,9 @@ from parse_push.client import get_client
 client = get_client()
 client.push('ios', 'devicetokenabcdefghijklmnopqstruvwxyz0123456789', {'foo': 'bar'})
 ```
+
+You can also configure a Client instance with `APPLICATION_ID` and `REST_API_KEY`
+
+```python
+client = Client(application_id='applicationidabcdefghijklmn0123456789', rest_api_key='restapikeyabcdefghijklmn0123456789')
+```
