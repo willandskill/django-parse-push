@@ -14,4 +14,9 @@ setup(
     long_description=open('README.md').read(),
     zip_safe=False,
     # test_suite="testproject.runtests.runtests",
+    requires=[
+        "django-enumerify(>=0.4)",
+        "djangorestframework(>=3.3)",
+        "requests(>=2.8)",
+    ]
 )
