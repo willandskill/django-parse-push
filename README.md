@@ -1,5 +1,7 @@
 # django-parse-push #
 
+A simple Django library for pushing notifications thru Parse.
+
 ---
 
 **Comes out of the box with**
