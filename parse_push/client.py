@@ -51,15 +51,8 @@ class Client:
                     "deviceToken" "abcdefghijklmnopqrstuvwxyz1234567890",
                 },
                 "data": {
-                    "title": "Django Push",
-                    "text": "Hello World!",
-                    "action": {
-                        "kind": "PORTFOLIO",
-                        "id": "12345"
-                    },
-                    "object": {
-                        "foo": "bar"
-                    }
+                    "title": "Django Parse Push",
+                    "text": "Hello World!"
                 }
             }
             :param kind:
