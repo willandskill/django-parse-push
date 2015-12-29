@@ -1,0 +1,17 @@
+*.pyc
+*.py.orig
+*.swp
+.idea
+.DS_Store
+dump.rdb
+media
+venv
+env
+logs
+staticfiles/*
+sftp-config.json
+*.codekit
+.codekit-cache
+config.codekit
+*-ck.js
+.sass-cache
