@@ -11,9 +11,11 @@ setup(
     url='https://github.com/willandskill/django-parse-push',
     license='BSD licence, see LICENCE.txt',
     description='Simple Django based wrapper for Parse Push API',
+    keywords=["django", "parse", "push", "rest"],
     long_description=open('README.md').read(),
     zip_safe=False,
-    # test_suite="testproject.runtests.runtests",
+    tests_require=['Django'],
+    test_suite="runtests.main",
     install_requires=[
         "django-enumerify==0.4",
         "djangorestframework==3.3",
