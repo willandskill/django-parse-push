@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-import os
 import sys
 import django
 
@@ -22,18 +21,13 @@ def main():
                 'django.contrib.sessions',
                 'parse_push',
             ],
-            # Django still complains? :(
-            DATABASE_ENGINE='django.db.backends.sqlite3',
-            DATABASES = {
+            DATABASES={
                 'default': {
                     'ENGINE': 'django.db.backends.sqlite3',
-                    'NAME': ':memory:'
                 }
             },
-            # MEDIA_PATH='/media/',
-            # ROOT_URLCONF='parse_push.tests.urls',
-            # DEBUG=True,
-            # TEMPLATE_DEBUG=True,
+            DEBUG=True,
+            # ROOT_URLCONF='testproject.urls',
         )
 
     # Compatibility with Django 1.7's stricter initialization
