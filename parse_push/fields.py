@@ -10,7 +10,7 @@ class EnumChoiceField(fields.Field):
 
     def to_representation(self, value):
         """ Return the serialized representation. """
-        inverted_dict = {v: k for k, v in self.enum.get_as_dict()}
+        inverted_dict = {v: k for k, v in self.enum.get_as_dict().iteritems()}
         return inverted_dict[value]
 
     def to_internal_value(self, value):
