@@ -13,8 +13,9 @@ class Device(models.Model):
     USAGE:
         from django.contrib.auth import get_user_model
 
-        user = get_user_model
-        device = user.device_set.latest()
+        User = get_user_model
+        user = User.objects.get(email='john@doe.com')
+        device = user.device_set.get_latest()
         device.push({'title': 'Hello World!', 'text': 'Lorem ipsum dolor...'})
     """
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
@@ -26,7 +27,7 @@ class Device(models.Model):
 
     class Meta:
         ordering = ('-created_at',)
-        unique_together = ('token', 'kind')
+        unique_together = (('token', 'kind'), )
 
     def push(self, data):
         client = get_client()
