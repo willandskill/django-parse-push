@@ -1,5 +1,0 @@
-Django==1.8
-django-enumerify==0.4
-djangorestframework==3.3
-requests=2.8
-django-parse-push=0.0.2
