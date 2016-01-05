@@ -43,6 +43,19 @@ PARSE_API_URL=https://api.parse.com
 PARSE_API_VERSION=1
 ```
 
+5) Add REST endpoint to urls.py
+
+    from django.conf.urls import patterns, include, url
+
+    urlpatterns = patterns('',
+
+        ...
+
+        (r'^api/v1/parse-push', include('parse_push.urls')),
+
+        ...
+    )
+
 ## Usage ##
 
 ###Example 1###
@@ -53,7 +66,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 user = User.objects.get(email='donald@duck.com')
-device = user.device_set.latest()
+device = user.device_set.latest('created_at')
 device.push({'title': 'Hello World!', 'text': 'Lorem ipsum dolor...'})
 ```
 
@@ -73,7 +86,7 @@ class User(AbstractBaseUser, PermissionsMixin)
         return full_name.strip()
 
     def push(self, data):
-        device = user.device_set.latest()
+        device = self.device_set.get_latest()
         return device.push(data)
 ```
 
