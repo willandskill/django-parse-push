@@ -4,7 +4,7 @@ import requests
 from .config import APPLICATION_ID, REST_API_KEY, API_URL, API_VERSION
 
 
-class Client:
+class Client(object):
 
     def __init__(self, application_id=None, rest_api_key=None, api_url=None, api_version=None):
         """
@@ -22,12 +22,13 @@ class Client:
         :return:
             None
         """
-        if application_id is None and rest_api_key is None:
+        if application_id is None:
             self.application_id = APPLICATION_ID
+        if rest_api_key is None:
             self.rest_api_key = REST_API_KEY
-
-        if api_url is None and api_version is None:
+        if api_url is None:
             self.api_url = API_URL
+        if api_version is None:
             self.api_version = API_VERSION
 
     def get_base_url(self):
@@ -77,4 +78,4 @@ def get_client():
     Helper for getting a preconfigured client.
     :return: Client object
     """
-    return Client(application_id=APPLICATION_ID, rest_api_key=REST_API_KEY, api_url=API_URL, api_version=API_VERSION)
+    return Client()
