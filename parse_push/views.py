@@ -10,12 +10,12 @@ from .serializers import DeviceSerializer
 
 class DeviceTokenSetter(APIView):
     """
-    Set a push token related to device for signed in User
+    Set a push token related to device for logged in User
     """
-    permission_classes = (IsAuthenticated,)
+    permission_classes = (IsAuthenticated, )
 
     def post(self, request, format=None):
-        serializer = DeviceSerializer(data=request.DATA)
+        serializer = DeviceSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
             try:
                 serializer.save(user=request.user)
