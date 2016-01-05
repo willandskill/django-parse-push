@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='django-parse-push',
-    version='0.0.2',
+    version='0.1',
     author=u'Will & Skill AB',
     author_email='info@willandskill.se',
     packages=find_packages(),
@@ -17,9 +17,9 @@ setup(
     tests_require=['Django'],
     test_suite="runtests.main",
     install_requires=[
-        "Django==1.8",
-        "django-enumerify==0.4",
-        "djangorestframework==3.3",
-        "requests==2.8",
+        "Django>=1.7",
+        "django-enumerify>=0.4",
+        "djangorestframework>=3.0",
+        "requests>=2.6",
     ]
 )
