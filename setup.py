@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='django-parse-push',
-    version='0.1.2',
+    version='0.1.3',
     author=u'Will & Skill AB',
     author_email='info@willandskill.se',
     packages=find_packages(),
