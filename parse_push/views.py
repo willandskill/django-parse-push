@@ -21,4 +21,4 @@ class DeviceTokenSetter(APIView):
                 serializer.save(user=request.user)
                 return Response(status=status.HTTP_201_CREATED)
             except IntegrityError:
-                return Response('Device instance already exists.', status=status.HTTP_409_CONFLICT)
+                return Response('Device instance already exists.', status=status.HTTP_200_OK)
