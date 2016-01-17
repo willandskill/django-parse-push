@@ -65,7 +65,7 @@ from django.contrib.auth import get_user_model
 User = get_user_model()
 user = User.objects.get(email='donald@duck.com')
 device = user.device_set.get_latest('created_at')
-device.push({'title': 'Hello World!', 'text': 'Lorem ipsum dolor...'})
+device.push({'alert': 'Hello World!', 'text': 'Lorem ipsum dolor...'})
 ```
 
 ###Example 2###
