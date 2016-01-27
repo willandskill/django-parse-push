@@ -22,6 +22,7 @@ class Device(models.Model):
     token = models.CharField(max_length=100, unique=True)
     kind = fields.SelectIntegerField(blueprint=DeviceKind, default=DeviceKind.IOS, db_index=True)
     created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
     objects = DeviceManager()
 
