@@ -56,7 +56,7 @@ urlpatterns = patterns('',
 
 ## Usage ##
 
-###Example 1###
+### Example 1 ###
 *A simple Django based example*
 
 ```python
@@ -68,7 +68,7 @@ device = user.device_set.get_latest('created_at')
 device.push({'alert': 'Hello World!', 'text': 'Lorem ipsum dolor...'})
 ```
 
-###Example 2###
+### Example 2 ###
 *With Django based User model*
 
 ```python
@@ -88,7 +88,7 @@ class User(AbstractBaseUser, PermissionsMixin)
         return device.push(data)
 ```
 
-###Example 3###
+### Example 3 ###
 *Barebone client, no dependency on Django*
 
 ```python
